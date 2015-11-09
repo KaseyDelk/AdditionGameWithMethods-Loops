@@ -8,7 +8,8 @@ For Homework 9, we reworked the game using method calls and for loops.
 
 ## References and Literature
 ```
-Listing 
+Listing 5.7 pg. 176
+Kasey Delk's java project from Homework 8
 ```
 
 ## Code
