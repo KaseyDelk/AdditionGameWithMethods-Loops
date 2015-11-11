@@ -5,10 +5,12 @@ This markdown file is a report that contains all of my work on the Addition Game
 For Homework 9, we reworked the game using method calls and for loops.
 
 ## Outline
+```
 1. Call addition game method
 2. Create addition game method
 3. Create for loop for running rounds
 3. Create method for getting and checking user answer
+```
 
 ## References and Literature
 ```
