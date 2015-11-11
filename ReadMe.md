@@ -136,3 +136,4 @@ E:\KLD_CS1_WorkSpace\AdditionGameWithMethodsLoops>
 ```
 
 ## Summary
+I know that methods are supposed to make our lives easier, but I found this homework assignment difficult. 
