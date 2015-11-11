@@ -5,18 +5,86 @@ This markdown file is a report that contains all of my work on the Addition Game
 For Homework 9, we reworked the game using method calls and for loops.
 
 ## Outline
+1. Call addition game method
+2. Create addition game method
+3. Create for loop for running rounds
+3. Create method for getting and checking user answer
 
 ## References and Literature
 ```
 Listing 5.7 pg. 176
 Kasey Delk's java project from Homework 8
+Listing 2.3 pg. 38
 ```
 
 ## Code
 ```java
+import java.util.Scanner;
+
+public class AdditionGameWithMethodsLoops {
+	public static void main(String[] args) {
+		
+		// call addition game method
+		AdditonGameMethod();
+	}
+	public static void AdditonGameMethod() {
+		
+		int hardness = 5;
+		int hardnessStep = 2;
+		int score = 0;
+		
+		// create for loop for running rounds
+		int numberOfRounds = 4;
+		for(int roundNumber = 1; 
+		roundNumber <= numberOfRounds;  
+		roundNumber = roundNumber + 1){
+			System.out.println("Round " + roundNumber);
+			boolean isAnswerCorrect = getAndCheckStudentAnswer(hardness);
+			if(isAnswerCorrect){
+				System.out.print("Your score was " + score + " and is now ");
+				score = score + hardness;
+				System.out.println(score + ".");
+				
+				if(roundNumber<numberOfRounds){
+					System.out.print("Your hardness was " + hardness + " and is now ");
+					hardness = hardness * hardnessStep;
+					System.out.println(hardness + ".");
+				}
+			}else{
+				if(roundNumber<numberOfRounds){
+					System.out.print("Your hardness was " + hardness + " and is now ");
+					if(hardness>5){
+						hardness = hardness / hardnessStep;
+					}
+					System.out.println(hardness + ".");
+				}
+			}
+		}
+		System.out.println("The game is complete.");
+		System.out.println("Your final score was " + score );
+	}
+	
+	public static boolean getAndCheckStudentAnswer(int hardness) {
+		int number1 = (int)(Math.random()*hardness);
+		int number2 = (int)(Math.random()*hardness);
+		System.out.println("Add " + number1 + " + " + number2);
+		System.out.println("Please enter integars only.");
+	
+		Scanner get = new Scanner(System.in);
+		int studentAnswer = get.nextInt();
+		if(studentAnswer == (number1 + number2)){
+			System.out.println("Good work, your answer was correct.");
+			return true;
+		}else{
+			System.out.println("Nice try, but the correct answer was " + (number1 + number2));
+			return false;
+		}
+	}
+}
 ```
 ## Console
 ```java
+
 ```
 ## Command Prompt
 
@@ -136,4 +204,4 @@ E:\KLD_CS1_WorkSpace\AdditionGameWithMethodsLoops>
 ```
 
 ## Summary
-I know that methods are supposed to make our lives easier, but I found this homework assignment difficult. 
+I know that methods are supposed to make our lives easier, but I found this homework assignment difficult. I'm glad that we worked on it in class together. I have a better understanding of for loops after this assignment, and while I have a lot more to learn about methods, they are very helpful for testing.
