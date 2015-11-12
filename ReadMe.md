@@ -75,10 +75,10 @@ public class AdditionGameWithMethodsLoops {
 		Scanner get = new Scanner(System.in);
 		int studentAnswer = get.nextInt();
 		if(studentAnswer == (number1 + number2)){
-			System.out.println("Good work, your answer was correct.");
+			System.out.println("Good work! Your answer was correct.");
 			return true;
 		}else{
-			System.out.println("Nice try, but the correct answer was " + (number1 + number2));
+			System.out.println("Nice try. The correct answer was " + (number1 + number2));
 			return false;
 		}
 	}
@@ -86,6 +86,35 @@ public class AdditionGameWithMethodsLoops {
 ```
 ## Console
 ```java
+Round 1
+Add 3 + 4
+Please enter integars only.
+7
+Good work! Your answer was correct.
+Your score was 0 and is now 5.
+Your hardness was 5 and is now 10.
+Round 2
+Add 8 + 3
+Please enter integars only.
+11
+Good work! Your answer was correct.
+Your score was 5 and is now 15.
+Your hardness was 10 and is now 20.
+Round 3
+Add 17 + 15
+Please enter integars only.
+32
+Good work! Your answer was correct.
+Your score was 15 and is now 35.
+Your hardness was 20 and is now 40.
+Round 4
+Add 19 + 22
+Please enter integars only.
+41
+Good work! Your answer was correct.
+Your score was 35 and is now 75.
+The game is complete.
+Your final score was 75
 
 ```
 ## Command Prompt
